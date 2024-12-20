@@ -2893,19 +2893,24 @@ function get_each_context(ctx, list, i) {
 	const child_ctx = ctx.slice();
 	child_ctx[2] = list[i].icon;
 	child_ctx[3] = list[i].description;
+	child_ctx[4] = list[i].title;
 	return child_ctx;
 }
 
-// (33:4) {#each icon_list as { icon, description }}
+// (33:4) {#each icon_list as { icon, description, title }}
 function create_each_block(ctx) {
 	let li;
 	let div0;
 	let icon;
 	let t0;
 	let div1;
-	let t1_value = /*description*/ ctx[3] + "";
+	let strong;
+	let t1_value = /*title*/ ctx[4] + "";
 	let t1;
 	let t2;
+	let t3_value = /*description*/ ctx[3] + "";
+	let t3;
+	let t4;
 	let current;
 	icon = new Component$1({ props: { icon: /*icon*/ ctx[2] } });
 
@@ -2916,8 +2921,11 @@ function create_each_block(ctx) {
 			create_component(icon.$$.fragment);
 			t0 = space();
 			div1 = element("div");
+			strong = element("strong");
 			t1 = text(t1_value);
-			t2 = space();
+			t2 = text(": ");
+			t3 = text(t3_value);
+			t4 = space();
 			this.h();
 		},
 		l(nodes) {
@@ -2930,9 +2938,14 @@ function create_each_block(ctx) {
 			t0 = claim_space(li_nodes);
 			div1 = claim_element(li_nodes, "DIV", { class: true });
 			var div1_nodes = children(div1);
-			t1 = claim_text(div1_nodes, t1_value);
+			strong = claim_element(div1_nodes, "STRONG", {});
+			var strong_nodes = children(strong);
+			t1 = claim_text(strong_nodes, t1_value);
+			t2 = claim_text(strong_nodes, ": ");
+			strong_nodes.forEach(detach);
+			t3 = claim_text(div1_nodes, t3_value);
 			div1_nodes.forEach(detach);
-			t2 = claim_space(li_nodes);
+			t4 = claim_space(li_nodes);
 			li_nodes.forEach(detach);
 			this.h();
 		},
@@ -2947,15 +2960,19 @@ function create_each_block(ctx) {
 			mount_component(icon, div0, null);
 			append_hydration(li, t0);
 			append_hydration(li, div1);
-			append_hydration(div1, t1);
-			append_hydration(li, t2);
+			append_hydration(div1, strong);
+			append_hydration(strong, t1);
+			append_hydration(strong, t2);
+			append_hydration(div1, t3);
+			append_hydration(li, t4);
 			current = true;
 		},
 		p(ctx, dirty) {
 			const icon_changes = {};
 			if (dirty & /*icon_list*/ 1) icon_changes.icon = /*icon*/ ctx[2];
 			icon.$set(icon_changes);
-			if ((!current || dirty & /*icon_list*/ 1) && t1_value !== (t1_value = /*description*/ ctx[3] + "")) set_data(t1, t1_value);
+			if ((!current || dirty & /*icon_list*/ 1) && t1_value !== (t1_value = /*title*/ ctx[4] + "")) set_data(t1, t1_value);
+			if ((!current || dirty & /*icon_list*/ 1) && t3_value !== (t3_value = /*description*/ ctx[3] + "")) set_data(t3, t3_value);
 		},
 		i(local) {
 			if (current) return;
