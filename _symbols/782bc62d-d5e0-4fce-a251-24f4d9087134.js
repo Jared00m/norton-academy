@@ -2897,7 +2897,7 @@ function get_each_context(ctx, list, i) {
 	return child_ctx;
 }
 
-// (54:6) {#each icon_list as { icon, title, description }}
+// (55:6) {#each icon_list as { icon, title, description }}
 function create_each_block(ctx) {
 	let li;
 	let div0;
@@ -2950,10 +2950,10 @@ function create_each_block(ctx) {
 			this.h();
 		},
 		h() {
-			attr(div0, "class", "icon svelte-lt8bm7");
-			attr(h3, "class", "title svelte-lt8bm7");
-			attr(div1, "class", "description svelte-lt8bm7");
-			attr(li, "class", "svelte-lt8bm7");
+			attr(div0, "class", "icon svelte-3j10d1");
+			attr(h3, "class", "title svelte-3j10d1");
+			attr(div1, "class", "description svelte-3j10d1");
+			attr(li, "class", "svelte-3j10d1");
 		},
 		m(target, anchor) {
 			insert_hydration(target, li, anchor);
@@ -3048,8 +3048,8 @@ function create_fragment(ctx) {
 			this.h();
 		},
 		h() {
-			attr(h2, "class", "heading svelte-lt8bm7");
-			attr(ul, "class", "svelte-lt8bm7");
+			attr(h2, "class", "heading svelte-3j10d1");
+			attr(ul, "class", "svelte-3j10d1");
 			attr(div, "class", "section-container");
 		},
 		m(target, anchor) {
