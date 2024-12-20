@@ -2904,7 +2904,7 @@ function get_each_context(ctx, list, i) {
 	return child_ctx;
 }
 
-// (108:6) {#each list_items as { icon, label }}
+// (107:6) {#each list_items as { icon, label }}
 function create_each_block(ctx) {
 	let li;
 	let span0;
@@ -2996,18 +2996,13 @@ function create_fragment(ctx) {
 	let div1;
 	let raw0_value = /*card*/ ctx[0].description.html + "";
 	let t3;
-	let a;
-	let t4_value = /*card*/ ctx[0].link.label + "";
-	let t4;
-	let a_href_value;
-	let t5;
 	let div4;
 	let h2;
-	let t6;
-	let t7;
+	let t4;
+	let t5;
 	let h3;
 	let raw1_value = /*subheading*/ ctx[3].html + "";
-	let t8;
+	let t6;
 	let ul;
 	let current;
 	let each_value = /*list_items*/ ctx[2];
@@ -3033,15 +3028,12 @@ function create_fragment(ctx) {
 			t2 = space();
 			div1 = element("div");
 			t3 = space();
-			a = element("a");
-			t4 = text(t4_value);
-			t5 = space();
 			div4 = element("div");
 			h2 = element("h2");
-			t6 = text(/*heading*/ ctx[1]);
-			t7 = space();
+			t4 = text(/*heading*/ ctx[1]);
+			t5 = space();
 			h3 = element("h3");
-			t8 = space();
+			t6 = space();
 			ul = element("ul");
 
 			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -3067,25 +3059,20 @@ function create_fragment(ctx) {
 			div1 = claim_element(div2_nodes, "DIV", { class: true });
 			var div1_nodes = children(div1);
 			div1_nodes.forEach(detach);
-			t3 = claim_space(div2_nodes);
-			a = claim_element(div2_nodes, "A", { class: true, href: true });
-			var a_nodes = children(a);
-			t4 = claim_text(a_nodes, t4_value);
-			a_nodes.forEach(detach);
 			div2_nodes.forEach(detach);
 			div3_nodes.forEach(detach);
-			t5 = claim_space(section_nodes);
+			t3 = claim_space(section_nodes);
 			div4 = claim_element(section_nodes, "DIV", { class: true });
 			var div4_nodes = children(div4);
 			h2 = claim_element(div4_nodes, "H2", { class: true });
 			var h2_nodes = children(h2);
-			t6 = claim_text(h2_nodes, /*heading*/ ctx[1]);
+			t4 = claim_text(h2_nodes, /*heading*/ ctx[1]);
 			h2_nodes.forEach(detach);
-			t7 = claim_space(div4_nodes);
+			t5 = claim_space(div4_nodes);
 			h3 = claim_element(div4_nodes, "H3", { class: true });
 			var h3_nodes = children(h3);
 			h3_nodes.forEach(detach);
-			t8 = claim_space(div4_nodes);
+			t6 = claim_space(div4_nodes);
 			ul = claim_element(div4_nodes, "UL", { class: true });
 			var ul_nodes = children(ul);
 
@@ -3104,8 +3091,6 @@ function create_fragment(ctx) {
 			attr(img, "class", "svelte-a33zmq");
 			attr(div0, "class", "title svelte-a33zmq");
 			attr(div1, "class", "description subheading svelte-a33zmq");
-			attr(a, "class", "button svelte-a33zmq");
-			attr(a, "href", a_href_value = /*card*/ ctx[0].link.url);
 			attr(div2, "class", "card-content svelte-a33zmq");
 			attr(div3, "class", "card svelte-a33zmq");
 			attr(h2, "class", "heading");
@@ -3125,17 +3110,14 @@ function create_fragment(ctx) {
 			append_hydration(div2, t2);
 			append_hydration(div2, div1);
 			div1.innerHTML = raw0_value;
-			append_hydration(div2, t3);
-			append_hydration(div2, a);
-			append_hydration(a, t4);
-			append_hydration(section, t5);
+			append_hydration(section, t3);
 			append_hydration(section, div4);
 			append_hydration(div4, h2);
-			append_hydration(h2, t6);
-			append_hydration(div4, t7);
+			append_hydration(h2, t4);
+			append_hydration(div4, t5);
 			append_hydration(div4, h3);
 			h3.innerHTML = raw1_value;
-			append_hydration(div4, t8);
+			append_hydration(div4, t6);
 			append_hydration(div4, ul);
 
 			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -3156,13 +3138,7 @@ function create_fragment(ctx) {
 			}
 
 			if ((!current || dirty & /*card*/ 1) && t1_value !== (t1_value = /*card*/ ctx[0].title + "")) set_data(t1, t1_value);
-			if ((!current || dirty & /*card*/ 1) && raw0_value !== (raw0_value = /*card*/ ctx[0].description.html + "")) div1.innerHTML = raw0_value;			if ((!current || dirty & /*card*/ 1) && t4_value !== (t4_value = /*card*/ ctx[0].link.label + "")) set_data(t4, t4_value);
-
-			if (!current || dirty & /*card*/ 1 && a_href_value !== (a_href_value = /*card*/ ctx[0].link.url)) {
-				attr(a, "href", a_href_value);
-			}
-
-			if (!current || dirty & /*heading*/ 2) set_data(t6, /*heading*/ ctx[1]);
+			if ((!current || dirty & /*card*/ 1) && raw0_value !== (raw0_value = /*card*/ ctx[0].description.html + "")) div1.innerHTML = raw0_value;			if (!current || dirty & /*heading*/ 2) set_data(t4, /*heading*/ ctx[1]);
 			if ((!current || dirty & /*subheading*/ 8) && raw1_value !== (raw1_value = /*subheading*/ ctx[3].html + "")) h3.innerHTML = raw1_value;
 			if (dirty & /*list_items*/ 4) {
 				each_value = /*list_items*/ ctx[2];

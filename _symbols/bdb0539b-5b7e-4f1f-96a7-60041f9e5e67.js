@@ -1285,7 +1285,7 @@ function get_each_context(ctx, list, i) {
 	return child_ctx;
 }
 
-// (89:10) {#if item.image.url}
+// (90:10) {#if item.image.url}
 function create_if_block(ctx) {
 	let img;
 	let img_alt_value;
@@ -1303,7 +1303,7 @@ function create_if_block(ctx) {
 		h() {
 			attr(img, "alt", img_alt_value = /*item*/ ctx[3].image.alt);
 			if (!src_url_equal(img.src, img_src_value = /*item*/ ctx[3].image.url)) attr(img, "src", img_src_value);
-			attr(img, "class", "svelte-gw68d4");
+			attr(img, "class", "svelte-umy1qy");
 		},
 		m(target, anchor) {
 			insert_hydration(target, img, anchor);
@@ -1323,7 +1323,7 @@ function create_if_block(ctx) {
 	};
 }
 
-// (87:6) {#each items as item}
+// (88:6) {#each items as item}
 function create_each_block(ctx) {
 	let li;
 	let t0;
@@ -1400,13 +1400,13 @@ function create_each_block(ctx) {
 			this.h();
 		},
 		h() {
-			attr(p, "class", "short-quote svelte-gw68d4");
-			attr(div0, "class", "long-quote svelte-gw68d4");
-			attr(span0, "class", "name svelte-gw68d4");
-			attr(span1, "class", "title svelte-gw68d4");
-			attr(div1, "class", "details svelte-gw68d4");
-			attr(div2, "class", "info svelte-gw68d4");
-			attr(li, "class", "svelte-gw68d4");
+			attr(p, "class", "short-quote svelte-umy1qy");
+			attr(div0, "class", "long-quote svelte-umy1qy");
+			attr(span0, "class", "name svelte-umy1qy");
+			attr(span1, "class", "title svelte-umy1qy");
+			attr(div1, "class", "details svelte-umy1qy");
+			attr(div2, "class", "info svelte-umy1qy");
+			attr(li, "class", "svelte-umy1qy");
 		},
 		m(target, anchor) {
 			insert_hydration(target, li, anchor);
@@ -1504,10 +1504,10 @@ function create_fragment(ctx) {
 			this.h();
 		},
 		h() {
-			attr(h2, "class", "heading svelte-gw68d4");
-			attr(ul, "class", "cards svelte-gw68d4");
-			attr(div, "class", "section-container svelte-gw68d4");
-			attr(section, "class", "svelte-gw68d4");
+			attr(h2, "class", "heading svelte-umy1qy");
+			attr(ul, "class", "cards svelte-umy1qy");
+			attr(div, "class", "section-container svelte-umy1qy");
+			attr(section, "class", "svelte-umy1qy");
 		},
 		m(target, anchor) {
 			insert_hydration(target, section, anchor);
